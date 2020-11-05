@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="397" height="302" viewBox="0 0 397 302">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="1" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9fbfc" stop-opacity="0"/>
+      <stop offset="0.266" stop-color="#fff" stop-opacity="0.729"/>
+      <stop offset="0.542" stop-color="#fff"/>
+      <stop offset="0.773" stop-color="#fff" stop-opacity="0.624"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rettangolo_1" data-name="Rettangolo 1" width="397" height="302" opacity="0.789" fill="url(#linear-gradient)"/>
+</svg>

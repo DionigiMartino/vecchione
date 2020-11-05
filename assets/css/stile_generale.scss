@@ -1,0 +1,246 @@
+$red_color: #760505;
+$grey_color: #707070;
+
+
+body {
+    width: 100%;
+    height: fit-content;
+    margin: 0 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .6) 30%, rgba(255, 255, 255, .3) 40%), url(../img/SFONDOVECCHIONE.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+*,
+*::before, 
+*::after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+.cont__header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_logo {
+        margin-top: 10%;
+
+        & img {
+            width: 175px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &_cta {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $red_color;
+        margin-top: 10%;
+        padding: 10px 0;
+
+        & p {
+            line-height: 0px;
+            color: #fff;
+            font-weight: bold;
+
+            & > a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.cont__main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &_inside {
+        width: 100%;
+        height: fit-content;
+        background-image: url(../img/rettangolosottoscritte.svg);
+        padding: 35px;
+        color: $grey_color;
+        text-align: center;
+        margin-top: 10%;
+
+        &_break {
+            border: 1px solid $red_color;
+            border-radius: 60%;
+            background-color: $red_color;
+            height: 4px;
+        }
+        
+        & > p {
+            line-height: 25px;
+        }
+
+        &_form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            & > input {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                border-bottom: 3px solid $red_color;
+                padding: 10px 15px;
+                margin-top: 2vh;
+            }
+
+            & > input[type="submit"] {
+                width: 125px;
+                background-color: $red_color;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.cont__footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+    padding: 30px;
+
+    &_inside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > a > img {
+            width: 125px;
+            object-fit: contain;
+        }
+    }
+    
+    &_maps {
+        width: 100%;
+        height: 200px;
+        border: 2px solid $grey_color;
+        margin-top: 5%;
+
+        & > iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_contacts {
+        padding-inline-start: 0;
+        list-style: none;
+
+        & > li {
+            margin-top: 15px;
+            color: $grey_color;
+            font-weight: bold;
+            transition: color .6s;
+
+            &:hover {
+                color: $red_color;
+            }
+
+            > a {
+                text-decoration: none;
+                color: $grey_color;
+                transition: color .6s;
+
+                &:hover {
+                    color: $red_color;
+                }
+            }
+        }
+
+        & > li[class="social"] {
+            width: 30%;
+            margin: 10% auto 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;;
+
+            & > a > img {
+                width: 25px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+@media(min-width: 780px){
+    .cont__header {
+
+        &_logo {
+            margin-top: 5%;
+
+            & > a > img {
+                width: 260px;
+            }
+        }
+
+        &_cta {
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 5%;
+        }
+    }
+
+    .cont__main {
+        max-width: 1980px;
+        margin: 10% auto;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_inside {
+            width: 45%;
+            margin: 0;
+
+            & > p {
+                line-height: 25px;
+            }
+        }
+    }
+
+    .cont__footer {
+
+        &_inside {
+            max-width: 1980px;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
+        }
+
+        &_maps {
+            width: 40%;
+            height: 150px;
+            margin: 0;
+        }
+
+        &_contacts {
+            width: 35%;
+            height: 150px;
+            margin: 0;
+            align-items: center;
+        }
+    }
+}
+
+::placeholder {
+    color: $grey_color;
+}
