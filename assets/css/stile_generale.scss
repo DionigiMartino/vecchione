@@ -116,12 +116,12 @@ body {
     width: 100%;
     height: fit-content;
     background-color: #fff;
-    padding: 30px;
 
     &_inside {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 30px;
 
         & > a > img {
             width: 125px;
@@ -177,6 +177,27 @@ body {
                 width: 25px;
                 object-fit: contain;
             }
+        }
+    }
+
+    &_featured {
+        width: 100%;
+        background-color: $grey_color;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+
+        & > p {
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        & > img {
+            width: 105px;
+            object-fit: contain;
         }
     }
 }
