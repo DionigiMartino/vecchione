@@ -27,10 +27,9 @@ body {
 .cont__header_logo {
   margin-top: 10%;
 }
-.cont__header_logo img {
-  width: 175px;
-  height: 100%;
-  object-fit: contain;
+.cont__header_logo > a > img {
+  width: 300px;
+  object-fit: cover;
 }
 .cont__header_cta {
   width: 100%;
@@ -75,26 +74,10 @@ body {
 .cont__main_inside > p {
   line-height: 25px;
 }
-.cont__main_inside_form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.cont__main_inside_form > input {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  border-bottom: 3px solid #760505;
-  padding: 10px 15px;
-  margin-top: 2vh;
-}
-.cont__main_inside_form > input[type=submit] {
-  width: 125px;
-  background-color: #760505;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
+.cont__main_inside_list > li {
+  margin-top: 10px;
+  text-align: left;
+  padding-inline-start: 0;
 }
 
 .cont__footer {
@@ -109,7 +92,7 @@ body {
   padding: 30px;
 }
 .cont__footer_inside > a > img {
-  width: 125px;
+  width: 200px;
   object-fit: contain;
 }
 .cont__footer_maps {
@@ -160,20 +143,27 @@ body {
   text-align: center;
   font-weight: bold;
   padding: 10px 0px;
-  display: flex;
-  justify-content: center;
 }
-.cont__footer_featured > p {
+.cont__footer_featured_inside {
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.cont__footer_featured_inside > p {
   font-size: 14px;
   color: #fff;
   font-weight: bold;
 }
-.cont__footer_featured > img {
+.cont__footer_featured_inside > img {
   width: 105px;
   object-fit: contain;
+  margin-left: 10px;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 1024px) {
   .cont__header_logo {
     margin-top: 5%;
   }
@@ -196,6 +186,11 @@ body {
     width: 45%;
     margin: 0;
   }
+  .cont__main_inside_list > li {
+    margin-top: 10px;
+    text-align: left;
+    padding-inline-start: 0;
+  }
   .cont__main_inside > p {
     line-height: 25px;
   }
@@ -206,7 +201,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 65px 50px;
   }
   .cont__footer_maps {
     width: 40%;
