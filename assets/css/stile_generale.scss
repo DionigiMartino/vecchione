@@ -8,10 +8,10 @@ body {
     margin: 0 0;
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .6) 30%, rgba(255, 255, 255, .3) 40%), url(../img/SFONDOVECCHIONE.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../img/SFONDOVECCHIONE.jpg);
+    // background-repeat: repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: 50% 0;
 }
 
 *,
@@ -19,6 +19,15 @@ body {
 *::after {
     box-sizing: inherit;
     font-family: inherit;
+}
+
+.sfumatura {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .8), transparent);
+    z-index: -1;
 }
 
 .cont__header {
@@ -39,18 +48,20 @@ body {
     }
 
     &_cta {
-        width: 100%;
+        width: 65%;
+        border-radius: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: $red_color;
         margin-top: 10%;
-        padding: 10px 0;
+        padding: 10px 35px;
 
         & p {
             line-height: 0px;
             color: #fff;
             font-weight: bold;
+            font-size: 21px;
 
             & > a {
                 color: #fff;
@@ -65,6 +76,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 5%;
 
     &_inside {
         width: 100%;
@@ -73,7 +85,6 @@ body {
         padding: 35px;
         color: $grey_color;
         text-align: center;
-        margin-top: 10%;
 
         &_break {
             border: 1px solid $red_color;
@@ -84,14 +95,28 @@ body {
         
         & > p {
             line-height: 25px;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        & > h2 {
+            color: $red_color;
+            text-align: left;
+            font-weight: bold;
         }
 
         &_list {
-                
+            display: flex;
+            flex-direction: column;
+            padding-inline-start: 0;
+
             & > li {
                 margin-top: 10px;
                 text-align: left;
-                padding-inline-start: 0;
+            }
+
+            & > li:first-of-type {
+                margin-top: 0px;
             }
         }
     }
@@ -203,40 +228,70 @@ body {
             margin-top: 5%;
 
             & > a > img {
-                width: 260px;
+                width: 400px;
             }
         }
 
         &_cta {
-            flex-direction: row;
             justify-content: center;
             margin-top: 5%;
+            width: fit-content;
+            border-radius: 100px;
+            padding: 0px 100px;
+
+            & > p {
+                font-size: 45px;
+
+                & > a {
+                    margin-top: -2.5%;
+                }
+            }
         }
     }
 
     .cont__main {
         max-width: 1980px;
-        margin: 10% auto;
+        margin: 2.5% auto;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
+        height: 550px;
 
         &_inside {
-            width: 45%;
+            width: 48%;
             margin: 0;
+            height: 550px;
+            position: absolute;
+            top: -15%;
+            left: 0;
+            z-index: -1;
+
+            &_break[id="firstLine"] {
+                display: none;
+            }
 
             &_list {
+
+                height: 400px;
                 
                 & > li {
-                    margin-top: 10px;
+                    margin-top: 25px;
                     text-align: left;
                     padding-inline-start: 0;
                 }
             }
 
             & > p {
+                height: 400px;
                 line-height: 25px;
             }
         }
+
+        &_inside[id="second"] {
+            left: unset;
+            right: 0;
+        }
+
     }
 
     .cont__footer {
@@ -248,10 +303,14 @@ body {
             justify-content: space-between;
             align-items: center;
             padding: 65px 50px;
+
+            & > a > img {
+                width: 350px;
+            }
         }
 
         &_maps {
-            width: 40%;
+            width: 30%;
             height: 150px;
             margin: 0;
         }
